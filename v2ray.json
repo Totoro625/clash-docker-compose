@@ -44,7 +44,7 @@
             "port":32102,
             "settings": {
                 "method": "ChaCha20-IETF-Poly1305",
-                "password": "examplepassword003",
+                "password": "examplepassword005",
                 "level": 1
             }
         }
