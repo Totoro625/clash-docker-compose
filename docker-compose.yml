@@ -13,7 +13,7 @@ services:
       - 42104:7999
     restart: always
     volumes:
-      - /root/clash:/root/.config/clash
+      - /root/clash-docker-compose/clash:/root/.config/clash
 
   v2ray-mtp:
     image: v2fly/v2fly-core:latest
@@ -23,7 +23,7 @@ services:
     links:
       - clash-out
     volumes:
-      - /root/v2ray.json:/etc/v2ray/config.json
+      - /root/clash-docker-compose/v2ray.json:/etc/v2ray/config.json
     restart: always
   frp-in:
     image: snowdreamtech/frps:latest
@@ -31,5 +31,5 @@ services:
       - 42100:32100
       - 42200:32200
     volumes:
-      - /root/frps.ini:/etc/frp/frps.ini
+      - /root/clash-docker-compose/frps.ini:/etc/frp/frps.ini
     restart: always
